@@ -272,3 +272,6 @@ input{
     cursor: pointer;
     color: gray;
 }
+.btn-remove:hover{
+    cursor:pointer;
+}
