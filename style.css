@@ -1,0 +1,274 @@
+body{
+    font-family: "inter", sans-serif;
+    background-color: #ffffff;
+}
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #777483;
+    height: 70px;
+}
+main{
+    display: flex;
+
+}
+.logo{
+    width:212px;
+    height: 24px;
+    font-weight:700;
+    font-size: 30px;
+    padding-right: 550px;
+    margin-bottom: 15px;
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 150px;
+}
+
+#all-itens{
+    color: #333333;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight:400 ; 
+}
+
+.products{
+    width: 1200px;
+    height: 655px;
+    display: flex;
+    margin-top: 18px;
+    margin-left: 120px;
+}
+
+.products-list{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 50px;    
+}
+
+.product{ 
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+}
+
+img{
+    background-color:gray ;
+    width: 300px;
+    height: 154px;
+}
+
+.classe{
+    background-color: #2E245E ;
+    width: 72px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight:400 ;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.productName{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 176px;
+    height: 24px;
+}
+
+p{
+    font-size: 12px;
+    color: #828282;
+    font-weight: 400;
+    width: 269px;
+    height: 33px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.preço{
+    color:#2E245E;
+    width: 269px;
+    height: 16px;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.adicionarcarrinho{
+    border: none;
+    width: 147px;
+    height: 16px;
+    color: #828282;
+    text-decoration-line: underline;
+    margin-left: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.camisabranca{
+    width: 266px;
+    height: 24px;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.jacketapreta{
+    width: 266px;
+    height: 24px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input{
+    width: 215px;
+    height: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.btn-find{
+    background-color: #6B54DE;
+    width: 96px;
+    height: 40px;
+    border: none;
+    margin-left: 8px;
+    color: #ffffff;
+}
+
+.shoplist{
+
+}
+
+.cart{
+    width: 347px;
+    height: 344px;
+    background-color: rgb(99, 107, 116);
+    display: flex;
+    
+}
+
+.cart-title{
+    background-color: #6B54DE;
+    width: 347px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px ;
+    
+}
+.cartproducts{
+    width: 275px;
+    height: 279px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.cartproducts img{
+    width: 80px;
+    height: 80px;
+}
+
+.produtsincart{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    width: 195px;
+    height: 80px;
+}
+
+.cartinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:10px ;
+    
+}
+
+.cartinfo h2{
+    width: 176px;
+    height: 24px;
+    margin-left: 17px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.cartinfo span{
+    width: 167px;
+    height: 16px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: #2E245E;
+}
+
+.btn-remove{
+    border: none;
+    width: 115px;
+    height: 16px;
+    background-color: rgb(99, 107, 116);
+    margin-left: 10px;
+}
+
+.categorias:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-find:hover{
+    text-decoration: underline;
+    cursor:pointer;
+    color: white;
+}
+
+.preço:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+.productName:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
+
+.camisabranca:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
+
+.jacketapreta:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
