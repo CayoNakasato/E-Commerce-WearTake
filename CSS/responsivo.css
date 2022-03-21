@@ -1,0 +1,6 @@
+@media (min-width: 720px){
+    .products-list{
+        width: 0.5rem;
+        background-color: blue;
+    }
+}

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".//reset.css">
-    <link rel="stylesheet" href=".//style.css">
+    <link rel="stylesheet" href=".//CSS/reset.css">
+    <link rel="stylesheet" href=".//CSS/style.css">
+    <link rel="stylesheet" href=".//CSS/hover.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
@@ -15,74 +16,26 @@
     <header>
         <h1 class="logo">Weartake</h1>
 
-        <ul>
-            <li class="categorias" >
-                <a href="" id="all-itens">Todos</a>  
-            </li>
-            <li class="categorias">
-                <a href="">Acessórios</a>
-            </li>
-            <li class="categorias">
-                <a href="">Calçados</a>  
-            </li>
-            <li class="categorias">
-                <a href="">Camisetas</a>
-            </li>
+        <ul id="listNav">
+            <li data-tag = "Todos" class="categorias" >Todos</li>
+            <li data-tag = "Acessórios" class="categorias">Acessórios</li>
+            <li data-tag = "Calçados" class="categorias">Calçados</li>
+            <li data-tag = "Camisetas" class="categorias">Camisetas</li>
         </ul>
 
     </header>
 
     <main>
         <section class="products">
-            <ul class="products-list">
-                <li class="product">
+            <ul id="products-list">
+                <!--<li class="product">
                     <img src=".//Imagens/Men-Jacket-Front-Black__15466 1.svg" alt="Jaqueta Preta">
                     <span class="classe">Camisetas</span>
                     <h2 class="productName">Lightweight Jacket</h2>
                     <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
                     <span class="preço">R$100.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
-                <li class="product">
-                    <img src=".//Imagens/image 1.svg" alt="Toca Preta">
-                    <span class="classe">Acessórios</span>
-                    <h2 class="productName">Black Hat</h2>
-                    <p>O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...</p>
-                    <span class="preço">R$100.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
-                <li class="product">
-                    <img src=".//Imagens/Surgical-Mask-Black__89554 1.svg" alt="Mascra Preta">
-                    <span class="classe">Acessórios</span>
-                    <h2 class="productName">Mask</h2>
-                    <p>Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...</p>
-                    <span class="preço">R$40.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
-                <li class="product">
-                    <img src=".//Imagens/Men-TShirt-Black-Front__70046 1.svg" alt="Camiseta Preta">
-                    <span class="classe">Camisetas</span>
-                    <h2 class="productName">T-Shirt</h2>
-                    <p>Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...</p>
-                    <span class="preço">R$100.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
-                <li class="product">
-                    <img src=".//Imagens/mockup-a0dc2330__62146 1.svg" alt="Camiseta Branca">
-                    <span class="classe">Camisetas</span>
-                    <h2 class = "camisabranca">Short-Sleeve T-Shirt</h2>
-                    <p>Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...</p>
-                    <span class="preço">R$100.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
-                <li class="product">
-                    <img src=".//Imagens/mockup-9b9894f1__67347 1.svg" alt="Jaqueta Champion Preta">
-                    <span class="classe">Camisetas</span>
-                    <h2 class = "jacketapreta">Champion Packable Jacket</h2>
-                    <p>Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...</p>
-                    <span class="preço">R$100.00</span>
-                    <button class="adicionarcarrinho">Adicionar ao carrinho</button>
-                </li>
+                    <button class="addCart">Adicionar ao carrinho</button>
+                </li>-->
                 
             </ul>
         </section>
@@ -94,51 +47,19 @@
             <h2 class="cart-title">Carrinho de compras</h2>
 
             <div class="cart">
-                <ul class="cartproducts">
-                    <li class="produtsincart">
-                        <img src=".//Imagens/jacket.svg" alt=""> 
-
-                        <div class="cart-info">
-                            <h2>Lightweight Jacket</h2> 
-                            <span class="preçocarrinho">R$100.00</span>
-                            <button class="btn-remove">Remover produto</button>
-                        </div>
-
-                    </li>
-                    <li class="produtsincart">
-                        <img src=".//Imagens/image 1.svg" alt=""> 
-
-                        <div class="cart-info">
-                            <h2>Black Hat</h2> 
-                            <span class="preçocarrinho">R$100.00</span>
-                            <button class="btn-remove">Remover produto</button>
-                        </div> 
-                    </li>
-                    <li class="produtsincart">
-                        <img src=".//Imagens/Men-TShirt-Black-Front__70046 1.svg" alt=""> 
-
-                        <div class="cart-info">
-                            <h2>T-Shirt</h2> 
-                            <span class="preçocarrinho">R$100.00</span>
-                            <button class="btn-remove">Remover produto</button>
-                        </div>
-                        
-                    </li>
-                </ul>
-
-                
+                <ul id="cartproducts"></ul>
             </div>
 
             <div class="last-info">
 
                 <div class="quantidade">
                     <h2 class="quantidadefinal">Quantidade:</h2>
-                    <span class="valor">3</span> 
+                    <span class="quantidadeItens"></span> 
                 </div>
 
-                <div class="valortotal">
+                <div class="valor">
                 <h2 class="totalfinal">Total:</h2>
-                <span class="valor">R$300,00</span> 
+                <span id="valorTotal">R$300,00</span> 
                  </div>  
 
             </div>
@@ -146,5 +67,7 @@
         </section>
       
     </main>
+
+    <script src=".//JS-DOM/dom.js"></script>
 </body>
 </html>

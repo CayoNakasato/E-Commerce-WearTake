@@ -1,0 +1,53 @@
+.categorias:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-find:hover{
+    text-decoration: underline;
+    cursor:pointer;
+    color: white;
+}
+
+.preço:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+.productName:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
+
+.camisabranca:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
+
+.jacketapreta:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: gray;
+}
+.btnremove:hover{
+    cursor:pointer;
+    color: red;
+    text-decoration-line: underline;
+}
+.product:hover{
+    box-shadow: -1px 6px 15px 2px rgba(0,0,0,0.45);
+    border: 2px solid lightskyblue;
+    cursor: pointer;
+}
+.addCart:hover{
+    cursor: pointer;
+    color: lightblue;
+}
+
+p:hover{
+    cursor: default;
+}

@@ -48,7 +48,7 @@ a{
     margin-left: 120px;
 }
 
-.products-list{
+#products-list{
     display:flex;
     flex-wrap: wrap;
     gap: 50px;    
@@ -87,7 +87,7 @@ img{
     margin-left: 15px;
     font-size: 18px;
     font-weight: 700;
-    width: 176px;
+    width: 240px;
     height: 24px;
 }
 
@@ -97,8 +97,7 @@ p{
     font-weight: 400;
     width: 269px;
     height: 33px;
-    margin-left: 15px;
-    margin-bottom: 15px;
+    margin: 5px 15px
 }
 
 .preço{
@@ -111,31 +110,14 @@ p{
     font-weight: 600;
 }
 
-.adicionarcarrinho{
+.addCart{
     border: none;
     width: 147px;
     height: 16px;
     color: #828282;
     text-decoration-line: underline;
-    margin-left: 15px;
+    margin-left: 5px;
     background-color: #ffffff;
-}
-
-.camisabranca{
-    width: 266px;
-    height: 24px;
-    margin-left: 15px;
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 700;
-}
-.jacketapreta{
-    width: 266px;
-    height: 24px;
-    margin-top: 15px;
-    margin-left: 15px;
-    font-size: 18px;
-    font-weight: 700;
 }
 
 input{
@@ -145,15 +127,17 @@ input{
     border: 1px solid #F5F5F5;
     padding: 10px;
     font-weight: 400;
+    border-radius: 5px;
 }
 
 .btn-find{
-    background-color: #6B54DE;
+    background-color: #2d2a3f;
     width: 96px;
     height: 40px;
     border: none;
     margin-left: 8px;
     color: #ffffff;
+    border-radius: 50px;
 }
 
 .shoplist{
@@ -161,15 +145,16 @@ input{
 }
 
 .cart{
-    width: 347px;
-    height: 344px;
-    background-color: #f5f5f5;
+    width: 345px;
+    height: 345px;
+    background-color: #757575;
     display: flex;
+    border: 1px solid gray;
     
 }
 
 .cart-title{
-    background-color: #6B54DE;
+    background-color: rgb(115 112 131);;
     width: 347px;
     height: 50px;
     color: #ffffff;
@@ -181,7 +166,7 @@ input{
     margin-top: 10px ;
     
 }
-.cartproducts{
+#cartproducts{
     width: 275px;
     height: 279px;
     display: flex;
@@ -192,9 +177,10 @@ input{
     margin-left: 20px;
 }
 
-.cartproducts img{
+#cartproducts img{
     width: 80px;
     height: 80px;
+    background-color: #757575;
 }
 
 .produtsincart{
@@ -205,7 +191,7 @@ input{
     height: 80px;
 }
 
-.cart-info{
+.cartinfo{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -213,15 +199,16 @@ input{
     
 }
 
-.cart-info h2{
+.cartinfo h2{
     width: 176px;
     height: 24px;
     margin-left: 17px;
     font-weight: 700;
     color: #333333;
+    margin-bottom: 10px;
 }
 
-.cart-info span{
+.cartinfo span{
     width: 167px;
     height: 16px;
     margin-left: 15px;
@@ -231,14 +218,15 @@ input{
 .preçocarrinho{
     font-weight: 600;
     font-size: 12px;
-    color: #2E245E;
+    color: #2d2a3f;
 }
 
-.btn-remove{
+.btnremove{
     border: none;
-    width: 115px;
+    width: 120px;
     height: 16px;
-    background-color: #f5f5f5;
+    background-color: #757575;
+    color: #ffffff;
     margin-left: 10px;
 }
 
@@ -263,8 +251,13 @@ input{
     color : #ffffff;
 }
 
-.valor{
+.quantidadeItens{
     color: #828282;
+    font-weight: 400;
+}
+
+#valorTotal{
+    color: #ffffff;
     font-weight: 400;
 }
 
@@ -274,62 +267,8 @@ input{
     padding: 20px;
 }
 
-.valortotal{
+.valor{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-   
-}
-
-.categorias:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
-}
-
-.btn-find:hover{
-    text-decoration: underline;
-    cursor:pointer;
-    color: white;
-}
-
-.preço:hover{
-    text-decoration-line: underline;
-    cursor: pointer;
-    color: blue;
-}
-
-.productName:hover{
-    text-decoration-line: underline;
-    cursor: pointer;
-    color: gray;
-}
-
-.camisabranca:hover{
-    text-decoration-line: underline;
-    cursor: pointer;
-    color: gray;
-}
-
-.jacketapreta:hover{
-    text-decoration-line: underline;
-    cursor: pointer;
-    color: gray;
-}
-.btn-remove:hover{
-    cursor:pointer;
-    color: red;
-}
-.product:hover{
-    box-shadow: -1px 6px 15px 2px rgba(0,0,0,0.45);
-    border: 2px solid lightskyblue;
-    cursor: pointer;
-}
-.adicionarcarrinho:hover{
-    cursor: pointer;
-    color: lightblue;
-}
-
-p:hover{
-    cursor: default;
 }
