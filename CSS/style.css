@@ -1,6 +1,7 @@
 body{
     font-family: "inter", sans-serif;
     background-color: #ffffff;
+    overflow: hidden;
 }
 header{
     display: flex;
@@ -130,7 +131,8 @@ input{
     border-radius: 5px;
 }
 
-.btn-find{
+
+#btnFind{
     background-color: #2d2a3f;
     width: 96px;
     height: 40px;
@@ -167,14 +169,14 @@ input{
     
 }
 #cartproducts{
-    width: 275px;
-    height: 279px;
+    width: 325px;
+    height: 325px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
     margin-top: 21px;
     margin-left: 20px;
+    overflow: auto;
 }
 
 #cartproducts img{
@@ -251,7 +253,7 @@ input{
     color : #ffffff;
 }
 
-.quantidadeItens{
+#quantidadeItens{
     color: #828282;
     font-weight: 400;
 }

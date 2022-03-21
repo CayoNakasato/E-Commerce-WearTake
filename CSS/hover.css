@@ -4,7 +4,7 @@
     color: white;
 }
 
-.btn-find:hover{
+#btnFind:hover{
     text-decoration: underline;
     cursor:pointer;
     color: white;
