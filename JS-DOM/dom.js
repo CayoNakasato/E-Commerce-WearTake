@@ -8,7 +8,7 @@ const produtos = [
     titulo: "Lightweight Jacket",
     descricao:
       "Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...",
-    valor: 100.0,
+    valor: 100.0
   },
 
   {
@@ -17,7 +17,7 @@ const produtos = [
     titulo: "Black Hat",
     descricao:
       "O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...",
-    valor: 100.0,
+    valor: 100.0
   },
 
   {
@@ -26,7 +26,7 @@ const produtos = [
     titulo: "Mask",
     descricao:
       "Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...",
-    valor: 40.0,
+    valor: 40.0
   },
 
   {
@@ -35,7 +35,7 @@ const produtos = [
     titulo: "T-Shirt",
     descricao:
       "Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...",
-    valor: 100.0,
+    valor: 100.0
   },
 
   {
@@ -44,7 +44,7 @@ const produtos = [
     titulo: "Short-Sleeve T-Shirt",
     descricao:
       "Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...",
-    valor: 100.0,
+    valor: 100.0
   },
 
   {
@@ -53,18 +53,50 @@ const produtos = [
     titulo: "Champion Packable Jacket",
     descricao:
       "Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...",
-    valor: 100.0,
+    valor: 100.0
   },
 ];
 
 let carrinhoDeCompras = [];
 
-function createElementCard(arrayProdutos) {
+const handleGetTotal = () => {
+const quantidadeItens = document.getElementById('quantidadeItens');
+const valorTotal = document.getElementById('valorTotal');
+
+let quantidade = carrinhoDeCompras.length;
+let total = 0;
+
+  for (let indice = 0; indice < carrinhoDeCompras.length; indice++){
+    const produtoAtual = carrinhoDeCompras[indice];
+    total += produtoAtual.valor;
+  }
+
+quantidadeItens.innerText = quantidade;
+valorTotal.innerText = `R$${total.toFixed(2)}`;
+}
+
+const handleAddToCart = (produto) => {
+  carrinhoDeCompras.push(produto);
+
+  handleCreateItenInCart(carrinhoDeCompras);
+
+  handleGetTotal();
+}
+
+const handleRemoveFromCart = (index) => {
+  carrinhoDeCompras.splice(index,1);
+
+  handleCreateItenInCart(carrinhoDeCompras);
+
+  handleGetTotal();
+}
+
+function handleCreateProduct(arrayProdutos){
   const list = document.getElementById("products-list");
   list.innerHTML = "";
 
   for (let i = 0; i < arrayProdutos.length; i++) {
-    let produto = arrayProdutos[i];
+    const produto = arrayProdutos[i];
 
     const li = document.createElement("li");
     const img = document.createElement("img");
@@ -84,33 +116,11 @@ function createElementCard(arrayProdutos) {
     categoria.innerText = produto.tag;
     titulo.innerText = produto.titulo;
     descrição.innerText = produto.descricao;
-    preço.innerText = "R$" + produto.valor;
+    preço.innerText = "R$" + produto.valor.toFixed(2);
     btnAdiciona.innerText = "Adicionar ao carrinho";
 
-    btnAdiciona.addEventListener("click", function (e) {
-      carrinhoDeCompras.push(produto);
+    btnAdiciona.addEventListener("click", (e) => handleAddToCart(produto));
 
-      itenInCart(carrinhoDeCompras);
-
-      let total = 0;
-      let count = carrinhoDeCompras.length;
-
-        for (let j = 0; j < carrinhoDeCompras.length; j++){
-          
-          const quantidadeItens = document.getElementById('quantidadeItens');
-          quantidadeItens.innerText = `${count}`;
-
-          const valorAtual = produto.valor;
-
-          total += valorAtual;
-
-          const valorTotal = document.getElementById('valorTotal');
-          valorTotal.innerText = `R$${total}.00`;
-    
-          console.log(total);
-          console.log(carrinhoDeCompras)
-        }
-    });
 
     li.appendChild(img);
     li.appendChild(categoria);
@@ -123,72 +133,66 @@ function createElementCard(arrayProdutos) {
   }
 }
 
-function itenInCart(produto) {
+function handleCreateItenInCart(produto){
   const shopList = document.getElementById("cartproducts");
-  shopList.innerHTML = ''
-  for (let i = 0; i < produto.length; i++) {
-    const item = produto[i];
-
-    const li = document.createElement("li");
-    const img = document.createElement("img");
-    const div = document.createElement("div");
-    const title = document.createElement("h2");
-    const price = document.createElement("span");
-    const btnRemove = document.createElement("button");
-
-    li.classList.add("produtsincart");
-    div.classList.add("cartinfo");
-    price.classList.add("preçocarrinho");
-    btnRemove.classList.add("btnremove");
-
-    btnRemove.addEventListener("click", function (e) {
-      const textButton = btnRemove.parentElement.children[1].textContent;
-
-      const indexItem = carrinhoDeCompras.indexOf(textButton);
-
-      carrinhoDeCompras.splice(indexItem,1);
-
-      btnRemove.parentElement.parentElement.remove();
+  shopList.innerHTML = '';
+  if(produto.length !== 0){
+    for (let i = 0; i < produto.length; i++){
       
-      const quantidadeItens = document.getElementById('quantidadeItens');
-      quantidadeItens.innerText = `${count - 1}`;
+      const item = produto[i];
 
-      const valorTotal = document.getElementById('valorTotal');
-      valorTotal.innerText = `R$${total - 100}.00`;
+      const li = document.createElement("li");
+      const img = document.createElement("img");
+      const div = document.createElement("div");
+      const title = document.createElement("h2");
+      const price = document.createElement("span");
+      const btnRemove = document.createElement("button");
 
-      console.log(carrinhoDeCompras)
-    });
+      li.classList.add("produtsincart");
+      div.classList.add("cartinfo");
+      price.classList.add("preçocarrinho");
+      btnRemove.classList.add("btnremove");
 
-    img.src = item.img;
-    title.innerText = item.titulo;
-    price.innerText = `R$ ${item.valor}.00`;
-    btnRemove.innerText = "Remover Produto";
+      btnRemove.addEventListener("click",(e) => handleRemoveFromCart(i));
+    
+      img.src = item.img;
+      title.innerText = item.titulo;
+      price.innerText = `R$ ${item.valor.toFixed(2)}`;
+      btnRemove.innerText = "Remover Produto";
 
-    div.appendChild(title);
-    div.appendChild(price);
-    div.appendChild(btnRemove);
+      div.appendChild(title);
+      div.appendChild(price);
+      div.appendChild(btnRemove);
 
-    li.appendChild(img);
-    li.appendChild(div);
+      li.appendChild(img);
+      li.appendChild(div);
 
-    shopList.appendChild(li);
+      shopList.appendChild(li);
+  }
+ }else{
+   shopList.innerHTML = `
+    <div class="emptyCart">
+        <h2 class = 'emptyCartTitle'>Carrinho Vazio</h2>
+        <span class = 'emptyCartSpan'>Adicione itens</span>
+    </div>
+   `
   }
 }
 
-function filterPost(e) {
+function filterProducts(e){
   const newData = [];
   const item = e.target;
   const filter = item.dataset.tag;
 
   if (filter === "Todos") {
-    createElementCard(produtos);
+    handleCreateProduct(produtos);
   } else {
     for (let i = 0; i < produtos.length; i++) {
       if (produtos[i].tag.indexOf(filter) !== -1) {
         newData.push(produtos[i]);
       }
     }
-    createElementCard(newData);
+    handleCreateProduct(newData);
   }
 }
 
@@ -196,18 +200,16 @@ function findProduct(){
   const inputValue = document.getElementById('btnBuscar');
   const newData = [];
 
-  console.log(inputValue.value)
   for (let i = 0; i < produtos.length; i++) {
     if(produtos[i].titulo.indexOf(inputValue.value) !== -1){
       newData.push(produtos[i]);
     }
   }
-  createElementCard(newData);
+  handleCreateProduct(newData);
 }
-
 
 btnBuscar.addEventListener('click', findProduct);
 
-listItem.addEventListener("click", filterPost);
+listItem.addEventListener("click", filterProducts);
 
-createElementCard(produtos);
+handleCreateProduct(produtos);
